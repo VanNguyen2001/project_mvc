@@ -1,76 +1,66 @@
-<div class="container">
-    <div class="row">
-      <div class="col-md-3">
-        <img src="./Public/image/logo.jpg" class="logo">
-      </div>
-      <div class="col-md-4 pp">
-        <form action="">
-          <div class="bg-light shadow-sm rounded-pill">
-            <div class="input-group">
-              <input type="search" placeholder="Bạn tìm gì ở đây?" aria-describedby="button-addon1" class="form-control border-0 bg-light">
-              <div class="input-group-append">
-                <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-        <div class="col-md-3 text-center pp">
-          <div class="shadow">
-            <h6 class="p-1 text-white bg-info"><b>LIÊN HỆ TRUNG TÂM</b></h6>
-            <h6 class="p-1"><i class="fas fa-phone-square"></i> 039 9712 074</h6>
-          </div>
-        </div>
-      <div class="col-md-2 pp text-center">
-        <a href="https://www.facebook.com/Nguyen.HuynhVan.2001"><img src="./Public/image/facebook.jpg" class="ci"></a>
-        <a href="" class="si"><img src="./Public/image/gmail.png" class="ci"></a>
-        <a href="" class="si"><img src="./Public/image/instagram.png" class="ci"></a>
-      </div>
-    </div>
-  </div>
-  <div class="container-fluid text-center bg-info">
-    <div class="row">
-      <div class="col-md-12">
-      <nav class="navbar navbar-expand-lg bg-info">
-          <button class="navbar-toggler bg-light text-info" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon text-info"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link card bg-info" href="<?php echo url('home'); ?>"><b class="text-white">TRANG CHỦ</b></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link card bg-info" href="<?php echo url('communications'); ?>"><b class="text-white">GIỚI THIỆU</b></a>
-              </li>
-              <li>
-                <a class="nav-link  card bg-info" href="<?php echo url('allotment'); ?>"><b class="text-white">PHÂN PHỐI</b></a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link card bg-info" href="<?php echo url('product'); ?>" data-toggle="dropdown">
-                  <b class="text-white">SẢN PHẨM</b>
+<div id="header" style="padding-top: 100px; ">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light shadow"style="background-color: #5ce1e6;" >
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>      
+                <a class="navbar-brand" href="<?php echo url_pattern('homeController', 'home'); ?>">
+                    <div class="logo" style="padding-left: 100px; "> 
+                        <img src="./Public/images/wyml.png" width="120px" height="65px">  
+                    </div>      
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                <div class="collapse navbar-collapse " id="navbarTogglerDemo03" >
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 " >
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white btn hover-white" href="<?php echo url_pattern('homeController', 'home'); ?>"  style="color: black;"><b>Trang chủ</b></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white btn hover-white" id="navbardropaaa" role="button" data-bs-toggle="dropdown" aria-expanded="false"  style="color: black;"><b>Sản Phẩm</b></a>
+                            <div class="dropdown-menu" aria-labelledby="navbardropaaa">
+                                <a class="dropdown-item" href="<?php echo url_pattern('homeController', 'shop'); ?>"><b>Tập Hồ Sơ</b></a>
+                                <a class="dropdown-item" href="<?php echo url_pattern('homeController', 'shop'); ?>"><b>Bìa Cứng</b></a>                             
+                                <a class="dropdown-item" href="<?php echo url_pattern('homeController', 'shop'); ?>"><b>Trụ Nhựa</b></a>
+                                <a class="dropdown-item" href="<?php echo url_pattern('homeController', 'shop'); ?>"><b>Kim Bấm</b></a>
+                                <a class="dropdown-item" href="<?php echo url_pattern('homeController', 'shop'); ?>"><b>Bút</b></a>
+                                <a class="dropdown-item" href="<?php echo url_pattern('homeController', 'shop'); ?>"><b>Giấy In</b></a>
+                            </div>                              
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white btn hover-white" href="<?php echo url_pattern('homeController', 'introduce'); ?>" id="navbardrop" data-toggle="dropdown"  style="color: black;"><b>Giới thiệu</b></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white btn hover-white" href="<?php echo url_pattern('homeController', 'list'); ?>" style="color: black;" ><b>Phân Phối</b></a>                               
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white btn hover-white" href="<?php echo url_pattern('homeController', 'knowledge'); ?>"  style="color: black;"><b>Nhà Sách</b></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white btn hover-white" href="<?php echo url_pattern('homeController', 'news'); ?>"  style="color: black;"><b>Tin Tức</b></a>
+                        </li>      
+                    </ul> 
+                    <div class="btn-user" style="margin-right:20px;">
+                        <div class="btn-cart1" onclick="show()">
+                            <?php if($this->auth->user()) { ?>
+                            <a class="btn hover-white  text-white" href="<?php echo url_pattern('authController', 'logout'); ?>" role="button"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                            <?php } else { ?>
+                            <a class="btn hover-white text-white" href="<?php echo url_pattern('authController', 'login'); ?>" role="button"><i class="fa fa-tags" aria-hidden="true"></i></a>
+                            <?php } ?>
+                            <a class="btn hover-white text-white" href="<?php echo url_pattern('homeController', 'cart'); ?>" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="search" style="margin-right:0px;">
+                        <form action="search.php" method="get">
+                            <div class="bg-light shadow-sm rounded-pill">
+                                <div class="input-group">
+                                <input name="q" type="search" placeholder="Nhập tên sản phẩm cần tìm ?" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+                                <div class="input-group-append">
+                                    <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                                </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link card bg-info" href="<?php echo url('bookstore'); ?>"><b class="text-white">NHÀ SÁCH</b></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link card bg-info" href="<?php echo url('login'); ?>"><b class="text-white">ĐĂNG NHẬP</b></a>
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <div class="col-md-2 text-center">
-                <a href="<?php echo url('cart'); ?>" class="text-white"><i class="fas fa-shopping-cart fs-25"></i></a>
-              </div>
-            </form>
-          </div>
+            </div>        
         </nav>
-      </div>
-    </div>
-  </div>
+</div> 
